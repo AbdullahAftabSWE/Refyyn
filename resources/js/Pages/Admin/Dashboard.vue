@@ -246,10 +246,13 @@ const selectItem = (item) => {
                 <table class="w-full">
                     <thead class="sticky top-0 z-10 bg-white font-bold">
                     <tr class="border-b border-gray-200 bg-gray-50">
-                        <th class="w-[50%] py-3 px-6 text-left text-xs text-gray-500 uppercase tracking-wider">
+                        <th class="w-[10%] py-3 px-6 text-left text-xs text-gray-500 uppercase tracking-wider">
+                            Date
+                        </th>
+                        <th class="w-[45%] py-3 px-6 text-left text-xs text-gray-500 uppercase tracking-wider">
                             Feedback
                         </th>
-                        <th class="w-[25%] py-3 px-2 text-left text-xs text-gray-500 uppercase tracking-wider">
+                        <th class="w-[20%] py-3 px-2 text-left text-xs text-gray-500 uppercase tracking-wider">
                             Status
                         </th>
                         <th class="w-[20%] py-3 px-2 text-left text-xs text-gray-500 uppercase tracking-wider">
@@ -274,6 +277,12 @@ const selectItem = (item) => {
                                 v-if="isUnread(feedback)"
                                 class="absolute left-0 top-0 bottom-0 w-0.5 bg-blue-500"
                             ></div>
+                            <div class="text-xs text-gray-500">
+                                {{ new Date(feedback.created_at).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) }}
+                            </div>
+                        </td>
+
+                        <td class="py-5 px-6">
                             <div class="flex flex-col gap-1">
                                 <div :class="[
                                     'text-sm font-medium transition-colors group-hover:text-blue-600',
