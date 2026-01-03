@@ -58,7 +58,7 @@ Publish updates and release notes to keep users informed about what's new.
 
 1. Clone and install:
 ```bash
-git clone https://github.com/AbdullahAftabSWE/Refyyn.git
+git clone https://github.com/AbdullahSWE/Refyyn.git
 cd refyyn
 composer install
 npm install
@@ -166,4 +166,4 @@ MIT License - see [LICENSE](LICENSE) file.
 
 ## Support
 
-Found a bug? [Open an issue](https://github.com/AbdullahAftabSWE/Refyyn/issues)
+Found a bug? [Open an issue](https://github.com/AbdullahSWE/Refyyn/issues)
